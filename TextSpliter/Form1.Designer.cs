@@ -47,6 +47,8 @@ namespace TextSpliter
             this.label4 = new System.Windows.Forms.Label();
             this.cmbAlignment = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblWordCount = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numSplitSize)).BeginInit();
             this.SuspendLayout();
             // 
@@ -230,12 +232,33 @@ namespace TextSpliter
             this.label5.TabIndex = 16;
             this.label5.Text = "Create By: Abdollah Mohajeri";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(890, 111);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(310, 32);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Total number of words: ";
+            // 
+            // lblWordCount
+            // 
+            this.lblWordCount.AutoSize = true;
+            this.lblWordCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.900001F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWordCount.Location = new System.Drawing.Point(1206, 106);
+            this.lblWordCount.Name = "lblWordCount";
+            this.lblWordCount.Size = new System.Drawing.Size(57, 39);
+            this.lblWordCount.TabIndex = 18;
+            this.lblWordCount.Text = "00";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1897, 1133);
+            this.Controls.Add(this.lblWordCount);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cmbAlignment);
             this.Controls.Add(this.label4);
@@ -282,6 +305,8 @@ namespace TextSpliter
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cmbAlignment;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblWordCount;
     }
 }
 

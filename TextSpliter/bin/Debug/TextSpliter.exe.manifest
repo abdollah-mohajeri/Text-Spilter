@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TextSpliter.exe" size="1442744">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TextSpliter.exe" size="1444280">
       <assemblyIdentity name="TextSpliter" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>r8YgYiwLNAyiWlhcw1TWp1Mu2jz4LDJCINMNdHz3PKs=</dsig:DigestValue>
+        <dsig:DigestValue>j6Q7eK1RtCZus4uoq6e7Obt0vj3oXqDJvIaFN3l1cfE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

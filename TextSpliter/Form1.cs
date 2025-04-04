@@ -38,6 +38,13 @@ namespace TextSpliter
 
 
 
+
+
+
+
+
+
+
         private void Open_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -47,9 +54,58 @@ namespace TextSpliter
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 inputFilePath = openFileDialog.FileName;
-                txtFilePath.Text = inputFilePath;  // نمایش مسیر فایل انتخاب‌شده
+                txtFilePath.Text = inputFilePath;
+
+                try
+                {
+
+                    Cursor.Current = Cursors.WaitCursor;
+                    lblWordCount.Text = "Processing...";
+
+                    string fileExtension = Path.GetExtension(inputFilePath).ToLower();
+                    string fullText = "";
+
+                    if (fileExtension == ".docx")
+                    {
+                        // خواندن متن از Word
+                        Word.Application wordApp = new Word.Application();
+                        Word.Document doc = wordApp.Documents.Open(inputFilePath, ReadOnly: true);
+                        fullText = doc.Content.Text;
+                        doc.Close(false);
+                        wordApp.Quit();
+                    }
+                    else if (fileExtension == ".txt")
+                    {
+                        // خواندن متن از فایل متنی
+                        fullText = File.ReadAllText(inputFilePath);
+                    }
+
+                    // شمارش کلمات
+                    int wordCount = fullText.Split(new[] { ' ', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries).Length;
+
+                    // نمایش تعداد واژه‌ها در Label
+                    lblWordCount.Text = $"{wordCount}";
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error reading file: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                finally
+                {
+                    Cursor.Current = Cursors.Default;
+                }
             }
         }
+
+
+
+
+
+
+
+
+
 
 
 
