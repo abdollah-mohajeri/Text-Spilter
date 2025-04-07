@@ -56,6 +56,9 @@ namespace TextSpliter
                 inputFilePath = openFileDialog.FileName;
                 txtFilePath.Text = inputFilePath;
 
+                // نمایش نام فایل در لیبل
+                lblFileName.Text = Path.GetFileName(inputFilePath);
+
                 try
                 {
 

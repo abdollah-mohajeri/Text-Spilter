@@ -49,6 +49,8 @@ namespace TextSpliter
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lblWordCount = new System.Windows.Forms.Label();
+            this.FileName = new System.Windows.Forms.Label();
+            this.lblFileName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numSplitSize)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,7 +58,7 @@ namespace TextSpliter
             // 
             this.Open.BackColor = System.Drawing.Color.LightBlue;
             this.Open.ForeColor = System.Drawing.Color.MediumBlue;
-            this.Open.Location = new System.Drawing.Point(163, 74);
+            this.Open.Location = new System.Drawing.Point(132, 75);
             this.Open.Name = "Open";
             this.Open.Size = new System.Drawing.Size(169, 80);
             this.Open.TabIndex = 0;
@@ -67,14 +69,14 @@ namespace TextSpliter
             // txtFilePath
             // 
             this.txtFilePath.BackColor = System.Drawing.SystemColors.Menu;
-            this.txtFilePath.Location = new System.Drawing.Point(365, 93);
+            this.txtFilePath.Location = new System.Drawing.Point(334, 94);
             this.txtFilePath.Name = "txtFilePath";
-            this.txtFilePath.Size = new System.Drawing.Size(251, 38);
+            this.txtFilePath.Size = new System.Drawing.Size(445, 38);
             this.txtFilePath.TabIndex = 1;
             // 
             // numSplitSize
             // 
-            this.numSplitSize.Location = new System.Drawing.Point(442, 200);
+            this.numSplitSize.Location = new System.Drawing.Point(411, 201);
             this.numSplitSize.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -106,7 +108,7 @@ namespace TextSpliter
             // 
             this.Relpace.BackColor = System.Drawing.Color.LightBlue;
             this.Relpace.ForeColor = System.Drawing.Color.MediumBlue;
-            this.Relpace.Location = new System.Drawing.Point(618, 312);
+            this.Relpace.Location = new System.Drawing.Point(587, 313);
             this.Relpace.Name = "Relpace";
             this.Relpace.Size = new System.Drawing.Size(161, 83);
             this.Relpace.TabIndex = 4;
@@ -116,7 +118,7 @@ namespace TextSpliter
             // 
             // txtFind
             // 
-            this.txtFind.Location = new System.Drawing.Point(404, 299);
+            this.txtFind.Location = new System.Drawing.Point(373, 300);
             this.txtFind.Name = "txtFind";
             this.txtFind.Size = new System.Drawing.Size(181, 38);
             this.txtFind.TabIndex = 5;
@@ -124,7 +126,7 @@ namespace TextSpliter
             // 
             // txtReplace
             // 
-            this.txtReplace.Location = new System.Drawing.Point(404, 366);
+            this.txtReplace.Location = new System.Drawing.Point(373, 367);
             this.txtReplace.Name = "txtReplace";
             this.txtReplace.Size = new System.Drawing.Size(181, 38);
             this.txtReplace.TabIndex = 6;
@@ -134,7 +136,7 @@ namespace TextSpliter
             // 
             this.Save.BackColor = System.Drawing.Color.LightBlue;
             this.Save.ForeColor = System.Drawing.Color.MediumBlue;
-            this.Save.Location = new System.Drawing.Point(175, 694);
+            this.Save.Location = new System.Drawing.Point(132, 693);
             this.Save.Name = "Save";
             this.Save.Size = new System.Drawing.Size(157, 61);
             this.Save.TabIndex = 7;
@@ -145,15 +147,15 @@ namespace TextSpliter
             // txtOutputPath
             // 
             this.txtOutputPath.BackColor = System.Drawing.SystemColors.Menu;
-            this.txtOutputPath.Location = new System.Drawing.Point(355, 704);
+            this.txtOutputPath.Location = new System.Drawing.Point(324, 705);
             this.txtOutputPath.Name = "txtOutputPath";
-            this.txtOutputPath.Size = new System.Drawing.Size(251, 38);
+            this.txtOutputPath.Size = new System.Drawing.Size(481, 38);
             this.txtOutputPath.TabIndex = 8;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(142, 202);
+            this.label1.Location = new System.Drawing.Point(111, 203);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(262, 32);
             this.label1.TabIndex = 9;
@@ -162,7 +164,7 @@ namespace TextSpliter
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(142, 336);
+            this.label2.Location = new System.Drawing.Point(111, 337);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(256, 32);
             this.label2.TabIndex = 10;
@@ -183,7 +185,7 @@ namespace TextSpliter
             this.cmbDirection.Items.AddRange(new object[] {
             "Left to Right",
             "Right to Left"});
-            this.cmbDirection.Location = new System.Drawing.Point(346, 478);
+            this.cmbDirection.Location = new System.Drawing.Point(315, 479);
             this.cmbDirection.Name = "cmbDirection";
             this.cmbDirection.Size = new System.Drawing.Size(270, 39);
             this.cmbDirection.TabIndex = 12;
@@ -192,7 +194,7 @@ namespace TextSpliter
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(174, 478);
+            this.label3.Location = new System.Drawing.Point(143, 479);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(143, 32);
             this.label3.TabIndex = 13;
@@ -201,7 +203,7 @@ namespace TextSpliter
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(174, 585);
+            this.label4.Location = new System.Drawing.Point(143, 586);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(158, 32);
             this.label4.TabIndex = 14;
@@ -215,7 +217,7 @@ namespace TextSpliter
             "Right",
             "Justify",
             "Center"});
-            this.cmbAlignment.Location = new System.Drawing.Point(355, 582);
+            this.cmbAlignment.Location = new System.Drawing.Point(324, 583);
             this.cmbAlignment.Name = "cmbAlignment";
             this.cmbAlignment.Size = new System.Drawing.Size(270, 39);
             this.cmbAlignment.TabIndex = 15;
@@ -251,12 +253,33 @@ namespace TextSpliter
             this.lblWordCount.TabIndex = 18;
             this.lblWordCount.Text = "00";
             // 
+            // FileName
+            // 
+            this.FileName.AutoSize = true;
+            this.FileName.Location = new System.Drawing.Point(890, 167);
+            this.FileName.Name = "FileName";
+            this.FileName.Size = new System.Drawing.Size(159, 32);
+            this.FileName.TabIndex = 19;
+            this.FileName.Text = "File Name: ";
+            // 
+            // lblFileName
+            // 
+            this.lblFileName.AutoSize = true;
+            this.lblFileName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.900001F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFileName.Location = new System.Drawing.Point(1055, 160);
+            this.lblFileName.Name = "lblFileName";
+            this.lblFileName.Size = new System.Drawing.Size(47, 39);
+            this.lblFileName.TabIndex = 20;
+            this.lblFileName.Text = "...";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1897, 1133);
+            this.Controls.Add(this.lblFileName);
+            this.Controls.Add(this.FileName);
             this.Controls.Add(this.lblWordCount);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -307,6 +330,8 @@ namespace TextSpliter
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblWordCount;
+        private System.Windows.Forms.Label FileName;
+        private System.Windows.Forms.Label lblFileName;
     }
 }
 
